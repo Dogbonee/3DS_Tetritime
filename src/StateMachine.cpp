@@ -9,7 +9,8 @@
 
 StateMachine::StateMachine() : m_dt(1.f / 370.f), m_shouldGameReset(false)
 {
-
+    m_gameMusic.loadFromFile("romfs:/music.opus");
+    m_gameMusic.setLooping(true);
 }
 
 StateMachine::~StateMachine()
@@ -50,6 +51,7 @@ void StateMachine::UpdateState()
 
 void StateMachine::Run()
 {
+    m_gameMusic.play();
     UpdateState();
 }
 
