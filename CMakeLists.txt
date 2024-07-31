@@ -27,24 +27,16 @@ set(SOURCE_FILES src/main.cpp
         src/BlitzGame.h
 )
 
+find_package(Dualie REQUIRED)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(OPUSFILE REQUIRED IMPORTED_TARGET opusfile)
+target_link_libraries(${PROJECT_NAME} ${DUALIE_LIBRARY})
 
-target_include_directories(${PROJECT_NAME} PRIVATE include)
-target_include_directories(${PROJECT_NAME} PRIVATE pkg-config opusfile)
-target_link_libraries(${PROJECT_NAME} PkgConfig::OPUSFILE)
-
-target_link_libraries(${PROJECT_NAME} /home/caleb/Documents/CLionProjects/Dualie/lib/libdualie.a citro2d citro3d ctru m)
-target_include_directories(${PROJECT_NAME} PUBLIC /home/caleb/Documents/CLionProjects/Dualie/include)
 
 target_compile_options(${PROJECT_NAME} PRIVATE
         -g -O2 -Wall
 )
-
-
 
 ctr_generate_smdh(${PROJECT_NAME}.smdh
         NAME "${PROJECT_NAME}"

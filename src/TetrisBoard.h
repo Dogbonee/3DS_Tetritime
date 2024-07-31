@@ -61,7 +61,7 @@ public:
 
     std::vector<int> &operator[](size_t index);
     TetrisBoard &operator=(TetrisBoard board);
-    void draw(const dl::Vector2f &viewOffset) const override;
+    void draw(const dl::Vector2f &viewOffset) override;
 };
 
 

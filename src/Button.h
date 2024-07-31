@@ -25,7 +25,7 @@ public:
     void setPosition(float x, float y);
     void ButtonUpdate();
 
-    void draw(const dl::Vector2f &viewOffset) const override;
+    void draw(const dl::Vector2f &viewOffset) override;
 
     std::function<void()> callback;
 

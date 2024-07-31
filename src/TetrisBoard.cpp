@@ -346,7 +346,7 @@ TetrisBoard &TetrisBoard::operator=(TetrisBoard board)
     return *this;
 }
 
-void TetrisBoard::draw(const dl::Vector2f &viewOffset) const
+void TetrisBoard::draw(const dl::Vector2f &viewOffset)
 {
     m_frame.draw(viewOffset);
     for (auto &i: m_vRect)

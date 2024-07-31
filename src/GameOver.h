@@ -15,7 +15,7 @@ class GameOver : public dl::Drawable
 public:
     GameOver();
     void SetGameOverScore(unsigned long score);
-    void draw(const dl::Vector2f &viewOffset) const override;
+    void draw(const dl::Vector2f &viewOffset) override;
 
 
     dl::Text GameoverText;

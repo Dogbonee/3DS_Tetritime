@@ -18,7 +18,7 @@ void GameOver::SetGameOverScore(unsigned long score)
     ScoreText.setString("Score: " + std::to_string(score));
 }
 
-void GameOver::draw(const dl::Vector2f &viewOffset) const
+void GameOver::draw(const dl::Vector2f &viewOffset)
 {
     GameoverText.draw(viewOffset);
     ScoreText.draw(viewOffset);

@@ -56,7 +56,7 @@ void Button::ButtonUpdate()
 }
 
 
-void Button::draw(const dl::Vector2f &viewOffset) const
+void Button::draw(const dl::Vector2f &viewOffset)
 {
     m_buttonShape.draw(viewOffset);
     m_buttonText.draw(viewOffset);

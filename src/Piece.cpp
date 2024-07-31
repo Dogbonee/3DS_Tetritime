@@ -129,7 +129,7 @@ void Piece::SetPosition(const dl::Vector2f &position)
 }
 
 
-void Piece::draw(const dl::Vector2f &viewOffset) const
+void Piece::draw(const dl::Vector2f &viewOffset)
 {
     for (auto &rect: m_pieceVisual)
     {

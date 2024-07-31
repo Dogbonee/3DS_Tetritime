@@ -58,7 +58,7 @@ public:
     const PieceArray &GetPieceArray() const;
     dl::Vector2f GetPosition() const;
     void SetPosition(const dl::Vector2f &position);
-    void draw(const dl::Vector2f &viewOffset) const override;
+    void draw(const dl::Vector2f &viewOffset) override;
 };
 
 
