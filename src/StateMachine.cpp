@@ -7,10 +7,11 @@
 #include <iostream>
 
 
-StateMachine::StateMachine() : m_dt(1.f / 370.f), m_shouldGameReset(false)
+StateMachine::StateMachine() : m_dt(0), m_shouldGameReset(false)
 {
     m_gameMusic.loadFromFile("romfs:/music.opus");
     m_gameMusic.setLooping(true);
+    m_window.set3dActive(true);
 }
 
 StateMachine::~StateMachine()
@@ -26,7 +27,7 @@ void StateMachine::UpdateState()
     //Event handling are each handled separately by each state, not in the state machine.
     while (m_window.isOpen())
     {
-
+        m_dt = m_clock.restart().asSeconds();
         if (p_currentState != nullptr)
         {
             if (m_shouldGameReset)
