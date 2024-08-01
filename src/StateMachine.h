@@ -6,6 +6,7 @@
 #define STATEMACHINE_HPP
 
 #include <Dualie/Audio/Music.hpp>
+#include <Dualie/System/Clock.hpp>
 #include <memory>
 #include <vector>
 
@@ -35,9 +36,11 @@ class StateMachine
     std::vector<std::shared_ptr<State>> m_states;
 
     dl::RenderWindow m_window;
+    dl::Clock m_clock;
     dl::Music m_gameMusic;
-    const float m_dt;
+    float m_dt;
     bool m_shouldGameReset;
+
 
 
     void UpdateState();

@@ -55,6 +55,8 @@ Game::Game(StateMachine &sm, dl::RenderWindow &window) : State(sm, window),
     HandleNextPiece();
     ManageGhostPiece();
 
+    m_board.setDepth(-5);
+
 }
 
 void Game::Render()

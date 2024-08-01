@@ -14,7 +14,7 @@ Piece::Piece(PieceType type) : m_level(0)
 
     generatePieceArray(type);
     SyncVisualWithPiece(System::PIECE_SIZE);
-
+    setDepth(-5);
 
 }
 
