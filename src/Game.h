@@ -11,6 +11,7 @@
 #include "TetrisBoard.h"
 #include "GameOver.h"
 #include "State.h"
+#include "Resources.h"
 #include <ctime>
 #include <cmath>
 #include <iostream>

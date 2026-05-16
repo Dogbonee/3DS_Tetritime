@@ -25,6 +25,8 @@ set(SOURCE_FILES src/main.cpp
         src/FLineGame.h
         src/BlitzGame.cpp
         src/BlitzGame.h
+        src/Resources.cpp
+        src/Resources.h
 )
 
 find_package(Dualie REQUIRED)

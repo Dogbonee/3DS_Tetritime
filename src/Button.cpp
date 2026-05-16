@@ -38,7 +38,7 @@ void Button::ButtonUpdate()
 {
     static bool hasTouched = false;
     static bool hasReleased = true;
-    if (dl::Input::TouchPosition != dl::Vector2f(0, 0))
+    if (dl::Input::TouchPosition != dl::Vector2u(0, 0))
     {
         hasTouched = true;
     }
@@ -47,7 +47,7 @@ void Button::ButtonUpdate()
         hasReleased = true;
     }
     if (hasTouched && hasReleased && dl::Input::TouchPosition == dl::Input::LastTouchPosition &&
-        m_buttonShape.getGlobalBounds().contains(dl::Vector2f(dl::Input::LastTouchPosition)) && callback !=
+        m_buttonShape.getGlobalBounds().contains(dl::Vector2f(dl::Input::LastTouchPosition.x, dl::Input::LastTouchPosition.y)) && callback !=
                                                                                                 nullptr)
     {
         hasReleased = false;

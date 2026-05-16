@@ -9,14 +9,12 @@
 
 StateMachine::StateMachine() : m_dt(0), m_shouldGameReset(false)
 {
-    m_gameMusic.loadFromFile("romfs:/music.opus");
-    m_gameMusic.setLooping(true);
     m_window.set3dActive(true);
 }
 
 StateMachine::~StateMachine()
 {
-
+    Resources::freeResources();
 }
 
 
@@ -52,7 +50,9 @@ void StateMachine::UpdateState()
 
 void StateMachine::Run()
 {
-    m_gameMusic.play();
+    Resources::loadResources();
+    Resources::MainTheme->setLooping(true);
+    Resources::MainTheme->play();
     UpdateState();
 }
 

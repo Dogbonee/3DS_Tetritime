@@ -231,8 +231,9 @@ void Game::RotatePieceComponents(RotationOption direction)
 void Game::HandleScoring()
 {
     std::vector<int> completedLines = m_board.CheckLines();
-    if (completedLines.size() == 0)
+    if (completedLines.empty())
     { return; }
+    Resources::ClearSound->restart();
     m_clearedLineCount += completedLines.size();
     int earnedScore = 0;
     switch (completedLines.size())
@@ -368,7 +369,7 @@ void Game::DropPiece()
     { return; }
     while (Tick())
     {}
-
+    Resources::PlaceSound->restart();
 }
 
 //Set the bool game over to true and set the final score in the game over screen

@@ -15,6 +15,7 @@
 #include "BlitzGame.h"
 #include "FLineGame.h"
 #include "Menu.h"
+#include "Resources.h"
 
 
 
@@ -37,7 +38,6 @@ class StateMachine
 
     dl::RenderWindow m_window;
     dl::Clock m_clock;
-    dl::Music m_gameMusic;
     float m_dt;
     bool m_shouldGameReset;
 
